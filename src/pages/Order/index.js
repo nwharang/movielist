@@ -4,7 +4,7 @@ import Child from './components'
 import { useAuth } from 'hooks/useAuth';
 import { useEffect, useState } from 'react';
 import useFetchHook from 'hooks/useFetchHook';
-import { Login } from 'redux/features/auth/Login';
+import { Login } from 'components/Login';
 export default function Contact() {
     useFetchHook("https://www.galaxycine.vn/api/movie/showAndComming", "data");
     useFetchHook("/api/all", "order")

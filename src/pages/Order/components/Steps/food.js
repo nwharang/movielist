@@ -35,7 +35,6 @@ const Food = ({ data, Order, setOrder }) => {
             Order.order.consession.forEach(element => {
                 try {
                     document.getElementById(element.description).value = element.quantity
-                    console.log(document.getElementById(element.description).value);
                 } catch (error) { }
             })
     })

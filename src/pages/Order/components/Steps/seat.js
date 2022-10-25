@@ -52,7 +52,6 @@ const Seat = ({ data, Order, setOrder }) => {
             setOrder((current) => {
                 let a = { ...current }
                 if (a.order.seat.findIndex(data => data.column === e.target.textContent && data.row === e.target.dataset.row) >= 0) {
-                    console.log("Subing");
                     a.order.seat.splice(a.order.seat.findIndex(data => data.column === e.target.textContent && data.row === e.target.dataset.row), 1)
                 }
                 return a

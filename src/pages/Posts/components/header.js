@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react';
-import Background from '../../../assets/bg.jpg'
+import Background from '../../../assets/bg.png'
 export default function Header({ data, info }) {
     const [Data, setData] = useState(null)
     useEffect(() => {
@@ -12,7 +12,7 @@ export default function Header({ data, info }) {
     return (
         <header className='pt-20'>
             <div className="w-full ">
-                <div className="relative banner">
+                <div className="relative banner text-white">
                     {Data ? <div className="flex justify-end md:px-32 md:py-20 ">
                         <div className='flex-1 md:flex-none p-3 bg-gradient-to-r box-decoration-clone from-indigo-600 to-pink-500 rounded-t-lg md:rounded-lg'>
                             <img className='md:w-96 w-full rounded-lg md:rounded-none' src={`https://www.galaxycine.vn${Data.imagePortrait}`} alt="" />
@@ -22,7 +22,7 @@ export default function Header({ data, info }) {
                             <img className='h-1/2' src={Background} alt="" />
                         </div>}
                     <div className="top-1/4 left-0 md:absolute md:w-1/3">
-                        <div className="md:text-4xl text-2xl font-bold bg-gradient-to-r box-decoration-clone from-indigo-600 to-pink-500 text-gray-200 p-4 rounded-b-xl md:rounded-none md:rounded-br-lg md:rounded-tr-lg md:w-full"  >
+                        <div className="md:text-4xl text-2xl font-bold bg-gradient-to-r box-decoration-clone from-indigo-600 to-pink-500 text-white p-4 rounded-b-xl md:rounded-none md:rounded-br-lg md:rounded-tr-lg md:w-full"  >
                             <p className='md:text-right text-center'>
                                 {Data?.name}
                             </p>

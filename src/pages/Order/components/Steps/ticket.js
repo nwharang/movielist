@@ -35,7 +35,6 @@ const Ticket = ({ data, Order, setOrder }) => {
             Order.order.ticket.forEach(element => {
                 try {
                     document.getElementById(element.description).value = element.quantity
-                    console.log(document.getElementById(element.description).value);
                 } catch (error) { }
             })
     })

@@ -2,8 +2,8 @@
 import { useAuth } from "hooks/useAuth";
 import { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { Login, Logout } from "redux/features/auth/Login";
-import Background from '../assets/logonoT.png'
+import { Login, Logout } from "components/Login";
+import Background from '../assets/logo512.png'
 import { UserCircleIcon } from '@heroicons/react/24/solid'
 export default function Nav() {
     const auth = useAuth()
@@ -21,11 +21,11 @@ export default function Nav() {
 
     const style = ({ isActive }) => isActive ? "p-3 bg-red-500 rounded-full text-white border-red-500 border-2 border-transparent " : "p-3 border-2 rounded-full border-red-500 hover:border-red-300 border-transparent "
     return (
-        <nav className="fixed w-full flex flex-col justify-center items-center text-red-500 z-50 bg-[#dcdcdc]/80 transition-all">
-            <div className="flex w-full md:h-20 h-16 md:justify-around items-center">
+        <nav className="fixed w-full flex flex-col justify-center items-center text-red-500 z-50 bg-transparent/50 transition-all">
+            <div className="flex w-full md:h-20 h-16 justify-between md:justify-around items-center">
                 <Link to="/" className="flex h-5/6 flex-row justify-center items-center gap-1">
-                    <img className="invert h-full p-1" src={Background} alt="" />
-                    <p className="md:text-xl md:inline-block font-bold">Galaxy - Vũ trụ</p>
+                    <img className="h-full p-1" src={Background} alt="" />
+                    <p className='hidden md:block bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 font-black text-xl'>Wharang</p>
                 </Link>
                 <form className="w-1/3 hidden md:block">
                     <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
@@ -37,7 +37,7 @@ export default function Nav() {
                         <button type="submit" className="text-white absolute right-0 bottom-0.5 bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 ">Search</button>
                     </div>
                 </form>
-                <ul className="hidden md:flex md:flex-row justify-end items-center gap-2 text-sm ">
+                <ul className="flex md:flex-row justify-end items-center gap-1 md:gap-2 text-sm ">
                     <li >
                         <NavLink to="/" end className={style}>Home</NavLink>
                     </li>

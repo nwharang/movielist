@@ -1,6 +1,6 @@
 export default function NoPage() {
 
     return (
-        <h2>NoPage</h2>
+        <div>NoPage</div>
     )
 }

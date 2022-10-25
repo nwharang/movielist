@@ -3,14 +3,12 @@ import Ticket from './Steps/ticket'
 import Food from './Steps/food'
 import Seat from './Steps/seat'
 import Total from './Steps/total'
+import { useNavigate } from 'react-router-dom'
 export default function Body({ data, info, film }) {
     const [isValidate, setIsValidate] = useState(false)
     const [State, setState] = useState(1);
     const [Order, setOrder] = useState({ film: film, info: info, order: { ticket: [], consession: [], seat: [] } });
-    useEffect(() => {
-        console.log("Order", Order);
-    }, [Order, data])
-
+    const navigate = useNavigate()
     return (
 
         <div className="container mx-auto pt-24 px-5 min-h-[100vh]">
@@ -18,7 +16,7 @@ export default function Body({ data, info, film }) {
             {/* Progess Bar */}
             {
                 data && <div className='flex flex-col md:flex-row gap-5 '>
-                    {State < 4 && <div className="flex w-[70%] flex-col border border-blue-500/20 shadow-lg shadow-blue-500/20 bg-gray-200/80 rounded-2xl p-1 md:p-5">
+                    {State < 4 && <div className="flex md:w-[70%] flex-col border border-blue-500/20 shadow-lg shadow-blue-500/20 bg-gray-200/80 rounded-2xl p-1 md:p-5">
                         <div className="min-h-[50vh]">
                             {State === 1 && <><Ticket data={data.ticket} Order={Order} setOrder={setOrder} /></>}
                             {State === 2 && <><Food data={data.consession} Order={Order} setOrder={setOrder} /></>}
@@ -44,7 +42,7 @@ export default function Body({ data, info, film }) {
                                 {State === 4 && <button className="px-4 py-3 font-bold text-white bg-blue-500/80 rounded-full" onClick={() => setState(1)} type="button">Back</button>}
                             </div>
                             <div className="absolute flex bottom-0 right-0">
-                                {State === 4 && <button className="px-4 py-3 font-bold text-white bg-blue-500/80 rounded-full" onClick={() => setState(1)} type="button">{State < 4 ? "Next" : "Finish"}</button>}
+                                {State === 4 && <button className="px-4 py-3 font-bold text-white bg-blue-500/80 rounded-full" onClick={() => State < 4 ? setState(1) : navigate("/")} type="button">{State < 4 ? "Next" : "Finish"}</button>}
                             </div>
                         </>}
                     </Total>
