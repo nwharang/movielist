@@ -4,7 +4,7 @@ import Nav from './nav'
 import Footer from './footer'
 const Layout = () => {
     return (
-        <div className="bg-gradient-to-b from-slate-900 via-purple-900 to-slate-900">
+        <div className="bg-gradient-to-b from-slate-800 via-purple-900 to-slate-900">
             <Nav />
             <Outlet />
             <Footer />

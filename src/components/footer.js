@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <div className='flex flex-col bg-gray-800 min-h-[20vh] mt-5 text-white md:mx-20 mx-2 rounded-t-3xl p-3 shadow-xl shadow-black/80 border border-black/20 items-center'>
-            <div className='flex flex-1 items-center drop-shadow-xl'>
-                <Link to="/" className="flex-1 flex justify-center items-center gap-1 my-3">
-                    <div className='h-14'>
-                        <img className=" h-full p-1" src={Background} alt="" />
-                    </div>
-                    <p className=' bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 font-black text-xl'>Wharang</p>
-                </Link>
-            </div>
-            <div className='w-full flex flex-1 flex-col md:flex-row justify-evenly md:text-center gap-5'>
+        <div className='flex flex-col min-h-[20vh] mt-5 text-white md:mx-20 mx-2 rounded-t-3xl p-3 shadow-xl shadow-black/80 border-2 border-purple-900/30 items-center'>
+            <div className='w-full flex flex-1 flex-col md:pt-10 md:flex-row justify-evenly md:text-center gap-5'>
+                <div className='flex flex-1 items-center drop-shadow-xl'>
+                    <Link to="/" className="flex-1 flex flex-col justify-center items-center gap-1 my-3">
+                        <div className='h-14'>
+                            <img className=" h-full p-1" src={Background} alt="" />
+                        </div>
+                        <p className=' bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 font-black text-xl'>Wharang</p>
+                    </Link>
+                </div>
                 <div className="flex flex-col flex-1">
                     <div className='font-bold text-xl'>
                         Navigate

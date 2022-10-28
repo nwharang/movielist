@@ -5,9 +5,9 @@ import Background from '../../assets/logo512.png'
 export default function About() {
     const auth = useAuth()
     return (
-        <div className="container mx-auto flex pt-20 p-1 md:p-10 md:pt-24 w-full min-h-[70vh] text-justify gap-5 ">
-            <div className='max-auto bg-gray-800 flex flex-col flex-1 rounded-3xl shadow-2xl border-2 border-gray-500/20 md:p-5 text-white leading-7 indent-8'>
-                <p className='font-bold text-lg mt-3 p-3 indent-0 underline '>
+        <div className="container mx-auto flex pt-20 p-2 md:p-10 md:pt-24 w-full min-h-[70vh] text-justify gap-5 ">
+            <div className='max-auto flex flex-col flex-1 rounded-3xl shadow-2xl border-2 shadow-black/80 border-purple-900/30 md:p-5 text-white leading-7 indent-8 py-3'>
+                <p className='font-bold text-lg p-3 pl-5 indent-0 underline '>
                     Paragraph
                 </p>
                 <p className='px-4 py-3'>
@@ -24,7 +24,7 @@ export default function About() {
                 </p>
             </div>
             <div className='hidden md:relative md:block'>
-                <div className="sticky top-24 md:flex flex-col rounded-3xl shadow-2xl bg-gray-800 border-2 border-gray-500/20 p-5">
+                <div className="sticky top-24 md:flex flex-col rounded-3xl shadow-2xl border-2 shadow-black/80 border-purple-900/30 p-5">
                     <div className='h-48 border-red-400/50 border-2 rounded-full p-2'>
                         <img className=" h-full p-1" src={Background} alt="" />
                     </div>

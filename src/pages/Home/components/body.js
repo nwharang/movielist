@@ -35,7 +35,7 @@ function Content({ data }) {
                 <>
                     {State === "button-1" ? data.apiData.movieCommingSoon.map((v, i) => {
                         return (
-                            <div className='container w-full relative flex text-white justify-center' key={i} onMouseEnter={handlerMouseHover} onMouseOut={handlerMouseOut} >
+                            <div className='w-full relative flex text-white justify-center ' key={i} onMouseEnter={handlerMouseHover} onMouseOut={handlerMouseOut} >
                                 <img className='w-full rounded-lg' src={`https://www.galaxycine.vn${v.imagePortrait}`} alt="" />
                                 {Hover === i.toString() ? <div className="absolute block bottom-0 h-full w-full rounded-lg" id={i} style={Style.Content} >
                                     <p className=' text-lg font-black ' style={Style.Title}>
@@ -54,13 +54,13 @@ function Content({ data }) {
                                         {"Khởi chiếu: " + new Date(v.startdate).toLocaleDateString()}
                                     </div>
                                 </div> : ""}
-                                <Link to={`posts/movieCommingSoon/${v.id}`} preventScrollReset={true} className="absolute h-full w-full" id={i} />
+                                <Link to={`posts/movieCommingSoon/${v.id}`} preventScrollReset={true} className="absolute h-full w-full shadow-2xl shadow-slate-900 border-transparent border-2 rounded-lg" id={i} />
                             </div>
                         )
                     }) :
                         data?.apiData.movieShowing.map((v, i) => {
                             return (
-                                <div className='container w-full relative flex text-white justify-center' key={i} onMouseEnter={handlerMouseHover} onMouseOut={handlerMouseOut} >
+                                <div className='w-full relative flex text-white justify-center' key={i} onMouseEnter={handlerMouseHover} onMouseOut={handlerMouseOut} >
                                     <img className='w-full rounded-lg' src={`https://www.galaxycine.vn${v.imagePortrait}`} alt="" />
                                     {Hover === i.toString() ? <div className="absolute block bottom-0 h-full w-full rounded-lg" id={i} style={Style.Content} >
                                         <p className=' text-lg font-black ' style={Style.Title}>
@@ -76,7 +76,7 @@ function Content({ data }) {
                                             {"Khởi chiếu: " + new Date(v.startdate).toLocaleDateString()}
                                         </div>
                                     </div> : ""}
-                                    <Link to={`posts/movieShowing/${v.id}`} preventScrollReset={true} className="absolute h-full w-full" id={i} />
+                                    <Link to={`posts/movieShowing/${v.id}`} preventScrollReset={true} className="absolute h-full w-full shadow-2xl shadow-slate-900 border-transparent border-2 rounded-lg" id={i} />
                                 </div>
                             )
                         })}

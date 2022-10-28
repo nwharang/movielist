@@ -14,8 +14,8 @@ export default function Header({ data, info }) {
             <div className="w-full ">
                 <div className="relative banner text-white">
                     {Data ? <div className="flex justify-end md:px-32 md:py-20 ">
-                        <div className='flex-1 md:flex-none p-3 bg-gradient-to-r box-decoration-clone from-indigo-600 to-pink-500 rounded-t-lg md:rounded-lg'>
-                            <img className='md:w-96 w-full rounded-lg md:rounded-none' src={`https://www.galaxycine.vn${Data.imagePortrait}`} alt="" />
+                        <div className='flex-1 md:flex-none p-5 bg-gradient-to-r box-decoration-clone from-indigo-600 to-pink-500 rounded-t-lg md:rounded-lg'>
+                            <img className='md:w-96 w-full rounded-xl md:rounded-2xl  shadow-2xl shadow-slate-900' src={`https://www.galaxycine.vn${Data.imagePortrait}`} alt="" />
                         </div>
                     </div> :
                         <div className="flex justify-end">
